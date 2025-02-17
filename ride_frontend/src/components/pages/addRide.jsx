@@ -28,7 +28,7 @@ function AddRide() {
     phone: "",
   });
 
-  const locations = ["Sarvanand Hostel", "Silver Springs", "Vijay Nagar"];
+  const locations = ["IIT Indore Gate No.1", "Indore Junction", "Indore Airport"];
   const rideTypes = ["Cab", "Auto", "Bike"];
 
   const handleChange = (field, value) => {
