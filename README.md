@@ -1,6 +1,34 @@
 # Ride Sharing Website
 
-## Overview
+
+### Steps to Run Locally
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AbhinavPatel271/Ride_Sharing_website.git
+   cd Ride_Sharing_website
+   ```
+2. **Setup Backend before Frontend**
+   ```bash
+   cd ride_backend
+   npm install
+   node index.js
+   ```
+3. **Setup Frontend - Open new terminal**
+   ```bash
+   cd ride_frontend
+   npm install
+   npm run dev
+   ```
+## NOTE - 
+Ensure that you are in ride_backend directory while running node index.js and 
+you are in ride_frontend directory while running npm run dev
+
+4. **Open the url in a web browser**
+   ```bash
+   http://localhost:5173/
+   ```
+
+## Project Overview
 This is a ride-sharing platform exclusively for IIT Indore students. Users can sign in using their institute email ID (`@iiti.ac.in`) and either create rides or join available rides. The platform facilitates easy ride coordination, request handling, and feedback through ratings.
 
 ## Features
@@ -25,33 +53,11 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 - **PostgreSQL**: Stores user data, ride details, and ride history. Hosted on Render.
 
  
+### Few screenshots are there in the screenshots folder, here are two of them:
 
-### Steps to Run Locally
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AbhinavPatel271/Ride_Sharing_website.git
-   cd Ride_Sharing_website
-   ```
-2. **Setup Backend before Frontend**
-   ```bash
-   cd ride_backend
-   npm install
-   node index.js
-   ```
-3. **Setup Frontend - Open new terminal**
-   ```bash
-   cd ride_frontend
-   npm install
-   npm run dev
-   ```
-## NOTE - 
-Ensure that you are in ride_backend directory while running node index.js and 
-you are in ride_frontend directory while running npm run dev
+<img src="screenshots/home1.png" alt="home1.png image"/>
 
-4. **Open the url in a web browser
-   ```bash
-   http://localhost:5173/
-   ```
+<br/> <hr/>
 
- 
+<img src="screenshots/home1.png" alt="home.png image"/>
 
