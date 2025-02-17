@@ -53,7 +53,7 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 - **PostgreSQL**: Stores user data, ride details, and ride history. Hosted on Render.
 
  
-### Few screenshots are there in the screenshots folder, here are two of them:
+<h1>Few screenshots are there in the <a href="screenshots" >screenshots</a> folder, here are two of them:<h1/>
 
 <img src="screenshots/home1.png" alt="home1.png image"/>
 
