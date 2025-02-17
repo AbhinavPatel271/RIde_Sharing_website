@@ -52,6 +52,10 @@ const Login = () => {
         variant="outlined"
         onClick={signInWithGoogle}
         startIcon={<FcGoogle />}
+        sx={{
+          position:'relative',
+          marginTop:'50px'
+        }}
       >
         Sign in with Institute ID
       </Button>

@@ -112,7 +112,7 @@ function Home() {
 
       <div className="home-image"> </div>
 
-      <div style={{ opacity: "0.92", marginTop: "-650px" }}>
+      <div style={{ opacity: "0.92", marginTop: "-75vh" }}>
         {showSearch && <RideSearchBox setRides={setSearchResults} />}
 
         {allRidesStatus && !userSearched ? (
