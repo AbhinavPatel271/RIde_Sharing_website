@@ -59,5 +59,5 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 
 <br/> <hr/>
 
-<img src="screenshots/home1.png" alt="home.png image"/>
+<img src="screenshots/home.png" alt="home.png image"/>
 
