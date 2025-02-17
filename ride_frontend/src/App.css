@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/rideshare_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.loginPage {
+  background-image: url("/login_laptop.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.footer-image {
+  width: 100vw;
+  margin-top: 100px;
+}
+
+.home-image {
+  background-image: url("/carpool_home_laptop.jpeg");
+
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.show-rides {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.add-ride-image {
+  height: 100vh;
+  background-image: url("/ride_create_page_laptop.jpeg");
+  background-size: cover;
+  background-position: center center;
+  padding: 25px;
+}
+
+.ride-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  max-width: 500px;
+  width: 100%;
+}
+
+.popular-rides {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 250px;
+  opacity: 0.75;
+}
+.popular-ride-card {
+  width: 40vw;
+}
+
+@media (max-width: 550px) {
+  .loginPage {
+    background-image: url("/login_mobile.jpeg");
+  }
+  .add-ride-image {
+    background-image: url("/ride_create_page_mobile.jpeg");
+  }
+  .home-image {
+    background-image: url("/carpool_home_mobile.jpeg");
+  }
+}
+
+@media (max-width: 720px) {
+  .show-rides {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    margin-top: 100px;
+  }
+
+  .ride-card {
+    width: 90vw;
+    flex-direction: column;
+    text-align: center;
+  }
+  .popular-rides {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .popular-ride-card {
+    width: 80vw;
+  }
+}
