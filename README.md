@@ -29,7 +29,7 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 ### Steps to Run Locally
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/ride-sharing.git](https://github.com/AbhinavPatel271/Ride_Sharing_website.git)
+   git clone https://github.com/AbhinavPatel271/RIde_Sharing_website.git
    cd Ride_Sharing_website
    ```
 2. **Setup Backend before Frontend**
