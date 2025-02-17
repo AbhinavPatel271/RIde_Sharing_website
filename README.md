@@ -22,42 +22,36 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 - **Express.js**: Handles API requests and user authentication.
 
 ### Database
-- **PostgreSQL**: Stores user data, ride details, and ride history.
+- **PostgreSQL**: Stores user data, ride details, and ride history. Hosted on Render.
 
-## Installation & Setup
-### Prerequisites
-Ensure you have the following installed:
-- Node.js
-- PostgreSQL
+ 
 
 ### Steps to Run Locally
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/ride-sharing.git
-   cd ride-sharing
+   cd Ride_Sharing_website
    ```
-2. **Setup Backend**
+2. **Setup Backend before Frontend**
    ```bash
-   cd backend
+   cd ride_backend
    npm install
-   npm start
+   node index.js
    ```
-3. **Setup Frontend**
+3. **Setup Frontend - Open new terminal**
    ```bash
-   cd ../frontend
+   cd ride_frontend
    npm install
-   npm start
+   npm run dev
    ```
-4. **Database Configuration**
-   - Ensure PostgreSQL is running.
-   - Configure the database connection in the backend environment variables.
+## NOTE - 
+Ensure that you are in ride_backend directory while running node index.js and 
+you are in ride_frontend directory while running npm run dev
 
-## Contributing
-Feel free to fork the repository and submit pull requests.
+4. **Open the url in a web browser
+   ```bash
+   http://localhost:5173/
+   ```
 
-## License
-This project is licensed under the MIT License.
-
----
-Made with ❤️ by IIT Indore students.
+ 
 
