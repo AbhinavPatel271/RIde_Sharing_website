@@ -11,16 +11,17 @@ import { Navigate } from "react-router-dom";
 function Home() {
   const { user } = useAuth();
 
-  if (!user) return <Navigate to="/" />; // Redirect if not logged in
+  if (!user) return <Navigate to="/" />;  // if the user(without login) directly hits a url path which is not accecssible publicly
+  // then he/she will be redirected to the login page for verification maintaining the security of the website 
 
-  const [allRidesStatus, setAllRidesStatus] = useState(false);
-  const [ridesFromBackend, setRides] = useState([]);
-  const [showSearch, setShowSearch] = useState(true);
-  const [userSearched, handleUserSearched] = useState(false);
-  const [searchedRidesStatus, setSearchedRidesStatus] = useState(false);
-  const [searchedRides, setSearchRideResults] = useState(null);
-  const [requestsSent, setRequestsSent] = useState([]);
-  const [requestsReceived, setRequestsReceived] = useState([]);
+  const [allRidesStatus, setAllRidesStatus] = useState(false);     // checks if any ride is available or not
+  const [ridesFromBackend, setRides] = useState([]);          // stores all the available rides at the moment 
+  const [showSearch, setShowSearch] = useState(true);            // handles the ride search box on the home page
+  const [userSearched, handleUserSearched] = useState(false);         // handles what users want to see - all rides or just specific rides(on basis of searching)
+  const [searchedRidesStatus, setSearchedRidesStatus] = useState(false);      //    checks if any ride(as searched by user) is available or not
+  const [searchedRides, setSearchRideResults] = useState(null);          // stores all the filtered rides(in any) as searched by the user
+  const [requestsSent, setRequestsSent] = useState([]);        // stores all the pending requests which user sent to others
+  const [requestsReceived, setRequestsReceived] = useState([]);         // stores all the pending requests which user received others
 
   useEffect(() => {
     if (!user) return;
@@ -84,7 +85,7 @@ function Home() {
     getRides();
     getRequestsMadeByUser(user.email);
     getRequestsMadeToUser(user.email);
-  }, [user]); // Depend on user, run only when user is available
+  }, [user]); // Depend on user, runs only when user is available
 
   function search() {
     setShowSearch((prev) => !prev);
@@ -104,13 +105,13 @@ function Home() {
     <div className="home">
       <Navbar
         user={user}
-        setSearch={search}
-        numNotification={requestsSent.length + requestsReceived.length}
+        setSearch={search}      // this is used to handle the toggling of the search bar on the home page
+        numNotification={requestsSent.length + requestsReceived.length}      // this will give signal to navbar that how many requests are pending which in turn will notify the user
         requestsSent={requestsSent}
         requestsReceived={requestsReceived}
       />
 
-      <div className="home-image"> </div>
+      <div className="home-image"> </div>        {/* this is for the background image on the home page */}
 
       <div style={{ opacity: "0.92", marginTop: "-75vh" }}>
         {showSearch && <RideSearchBox setRides={setSearchResults} />}

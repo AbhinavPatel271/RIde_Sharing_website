@@ -13,8 +13,8 @@ import { Navigate } from "react-router-dom";
 
 function AddRide() {
   const { user } = useAuth();
-  if (!user) return <Navigate to="/" />;
-
+  if (!user) return <Navigate to="/" />;         // if the user(without login) directly hits a url path which is not accecssible publicly
+                                                 // then he/she will be redirected to the login page for verification maintaining the security of the website                                                  
   const [rideDetails, setRideDetails] = useState({
     email: user.email,
     source: "",
@@ -28,13 +28,15 @@ function AddRide() {
     phone: "",
   });
 
-  const locations = ["IIT Indore Gate No.1", "Indore Junction", "Indore Airport"];
-  const rideTypes = ["Cab", "Auto", "Bike"];
+  const locations = ["IIT Indore Gate No.1", "Indore Junction", "Indore Airport"];  // locations for dropdown menu
+  const rideTypes = ["Cab", "Auto", "Bike"];   // for dropdown menu
 
-  const handleChange = (field, value) => {
+
+  const handleChange = (field, value) => {                 // taking input of the create ride form details 
     setRideDetails({ ...rideDetails, [field]: value });
   };
 
+  //// function for creating a ride and handling errors
   async function handleSubmit(e) {
     e.preventDefault();
 

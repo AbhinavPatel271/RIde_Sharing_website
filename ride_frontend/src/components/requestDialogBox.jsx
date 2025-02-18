@@ -24,6 +24,8 @@ function RequestDialog({
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+
+  // function for handling the request the user sends to any of the available rides and then giving proper response to the user
   async function handleSend() {
     try {
       if (message === null) setMessage("");

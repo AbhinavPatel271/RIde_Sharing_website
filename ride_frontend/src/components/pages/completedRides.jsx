@@ -25,16 +25,19 @@ import { Navigate, useNavigate } from "react-router-dom";
 function CompletedRides() {
   const { user } = useAuth();
   const navigate = useNavigate();
-  if (!user) return <Navigate to="/" state={{ route: "/completedRides" }} />; // Redirect if not logged in
+  if (!user) return <Navigate to="/" state={{ route: "/completedRides" }} />;  // if the user(without login) directly hits a url path which is not accecssible publicly
+  // then he/she will be redirected to the login page for verification maintaining the security of the website 
 
-  const [value, setValue] = React.useState("1");
-  const [selfMadeCompletedRides, setSelfMadeCompletedRides] = useState([]);
+  const [value, setValue] = React.useState("1");                              //// this controls the tabs of the webpage
+  const [selfMadeCompletedRides, setSelfMadeCompletedRides] = useState([]);       
   const [othersMadeCompletedRides, setOthersMadeCompletedRides] = useState([]);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+
+  const handleChange = (event, newValue) => {      // this handles the change of tabs on the webpage
+    setValue(newValue);    
   };
 
   useEffect(() => {
+    // function for fetching ride history of the user
     async function getCompletedRides() {
       try {
         const response = await axios.get(

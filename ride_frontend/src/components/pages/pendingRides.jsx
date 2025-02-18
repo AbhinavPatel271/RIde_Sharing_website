@@ -15,26 +15,28 @@ import { useAuth } from "../../authContext";
 import { Navigate } from "react-router-dom";
 function PendingRides() {
   const { user } = useAuth();
-  if (!user) return <Navigate to="/" />; // Redirect if not logged in
+  if (!user) return <Navigate to="/" />;  // if the user(without login) directly hits a url path which is not accecssible publicly
+  // then he/she will be redirected to the login page for verification maintaining the security of the website 
 
-  const [value, setValue] = useState("1");
+  const [value, setValue] = useState("1");         // handles the tabs on the webpage
   const [selfMadePendingRides, setSelfMadePendingRides] = useState([]);
   const [othersMadePendingRides, setOthersMadePendingRides] = useState([]);
-  const [ratingValues, setRatingValues] = useState({});
+  const [ratingValues, setRatingValues] = useState({});      // stores the rating as given by user which is then sent to backend to store inside database
 
-  const handleRatingChange = (rideId, newValue) => {
+  const handleRatingChange = (rideId, newValue) => {     // handles the ratings as given by the user to different rides
     setRatingValues((prevRatings) => ({
       ...prevRatings,
       [rideId]: newValue,
     }));
   };
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event, newValue) => {      // handles the change in tabs on the web page
     setValue(newValue);
   };
 
-  /// call krwao isko
+  
 
+// fetching pending rides from the backend the handling errors
   useEffect(() => {
     async function getPendingRides() {
       try {

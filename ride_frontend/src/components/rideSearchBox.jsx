@@ -19,7 +19,9 @@ function RideSearchBox(props) {
   const [destinationDropdown, setDestinationDropdown] =
     useState(default_locations);
   const { user } = useAuth();
+
   useEffect(() => {
+    // fucntion which is used to fetch all the available locations(sources and destination) to show in the dropdown menu
     async function getAvailableLocation() {
       console.log("Fetching available locations...");
       try {
@@ -49,10 +51,12 @@ function RideSearchBox(props) {
     getAvailableLocation();
   }, []);
 
+
+  // function for handling the user search query(for getting filtered rides)
   async function handleSearch() {
     if (source == null) setSource("");
     if (destination == null) setDestination("");
-    // checking that atleast one entry should be filled
+    // checking that atleast one of the entry should be filled
     if (
       (source.trim().length == 0 || source == null) &&
       (destination.trim().length == 0 || destination == null)

@@ -15,21 +15,22 @@ import { useAuth } from "../../authContext";
 import { Navigate } from "react-router-dom";
 function RequestTabs() {
   const { user } = useAuth();
-  if (!user) return <Navigate to="/" />; // Redirect if not logged in
+  if (!user) return <Navigate to="/" />;  // if the user(without login) directly hits a url path which is not accecssible publicly
+  // then he/she will be redirected to the login page for verification maintaining the security of the website 
 
-  const [requestsSent, setRequestsSent] = useState([]);
+  const [requestsSent, setRequestsSent] = useState([]); 
   const [requestsReceived, setRequestsReceived] = useState([]);
 
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = React.useState("1");     // handles the tabs on the webpage
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event, newValue) => {        // handles the change in tabs on the web page
     setValue(newValue);
   };
 
+  /// functions for fetcing all the pending requests 
   useEffect(() => {
     if (!user) return;
 
-    console.log("ye chal rha h");
     async function getRequestsMadeByUser(email) {
       try {
         const response = await axios.get(
@@ -96,7 +97,7 @@ function RequestTabs() {
     }
   }
 
-  const [messages, setMessages] = React.useState({});
+  const [messages, setMessages] = useState({});
 
   return (
     <>

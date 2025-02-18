@@ -12,11 +12,12 @@ function Navbar(props) {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
 
+  // for the profile dropdown , this handles that which button was used to trigger the dropdown
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = () => {    // this handles the closing of the dropdown
     setAnchorEl(null);
   };
 
@@ -42,7 +43,7 @@ function Navbar(props) {
 
           <div style={{ display: "flex", gap: "10px", marginRight: "20px" }}>
             <Badge
-              badgeContent={props.numNotification}
+              badgeContent={props.numNotification}       // this notifies the user weather there are any pending requests available or not
               color="info"
               sx={{ marginBottom: "px" }}
             >
