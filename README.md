@@ -1,5 +1,11 @@
 # Ride Sharing Website
 
+**Troubleshooting -**
+1. I have used firebase for authentication which sometimes fails on local network, 
+   in this case try using a VPN for login.
+2. Sometimes on few of the VPN services, render(on which my postgres database is hosted) doesn't work , so after login(using VPN) , turn off the VPN and restart the backend again 
+   by running node index.js in the ride_backend directory.  
+
 <p>I have done and submitted and all the required files within the actual deadline of the PS, 
    I have just added few comments(for explanation) in the files and updated the readme a little after the deadline.
    So, please consider this 🙏.</p>
