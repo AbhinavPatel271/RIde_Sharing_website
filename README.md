@@ -1,5 +1,8 @@
 # Ride Sharing Website
 
+<p>I have done and submitted and all the required files within the actual deadline of the PS, 
+   I have just added few comments(for explanation) in the files and updated the readme a little after the deadline.
+   So, please consider this 🙏.</p>
 
 ### Steps to Run Locally
 1. **Clone the repository**
@@ -35,8 +38,9 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 - **User Authentication**: Sign-in is restricted to IIT Indore students using their `@iiti.ac.in` email.
 - **Create a Ride**: Users can create a ride by entering relevant details like source, destination, date, time, and available seats.
 - **View Available Rides**: Users can browse all pending rides with at least one available seat.
-- **Ride Requests**: Users can send and receive requests for sharing rides.
+- **Ride Requests**: Users can send and receive requests along with a mesaage for sharing rides.
 - **Manage Requests**: Users can view sent and received requests and respond accordingly.
+- **Repeated Requests**: If a user made a ride request to someone and the ride creator doesn't want to respond to the request(due to personal reasons), then the user cannot send the request again and again. 
 - **Ride Search**: Search for rides based on source, destination, or both.
 - **Pending Rides**: A dedicated page to manage pending rides, mark them as complete, and provide ratings.
 - **Ride History**: Users can view their completed rides, see details of ride partners, and check an averaged rating based on feedback from all ride partners.
@@ -45,6 +49,7 @@ This is a ride-sharing platform exclusively for IIT Indore students. Users can s
 ### Frontend
 - **React.js**: For a dynamic and interactive UI.
 - **Material UI**: For modern and responsive UI components.
+- **Firebase**: For authentication of the users.
 
 ### Backend
 - **Express.js**: Handles API requests and user authentication.
